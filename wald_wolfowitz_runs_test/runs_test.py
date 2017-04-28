@@ -8,12 +8,13 @@ def _calculate_p_value(z_value):
     Here we assume using the normal distribution
     :return: 
     """
-    return norm.sf(z_value)
+    return norm.sf(abs(z_value))
 
 
-def runs(list1, list2, confidence_interval=0.05):
+def runs(list1, list2, alpha=0.05):
     """
     This function executes the whole Wald-Wolfowitz runs tests.
+    :param alpha: 
     :param list1: 
     :param list2: 
     :return: 
@@ -24,7 +25,7 @@ def runs(list1, list2, confidence_interval=0.05):
     variance = _calculate_variance(mean, len(list1) + len(list2))
     z_score = _calculate_z_score(nruns, mean, variance)
     p_val = _calculate_p_value(z_score)
-    return p_val <= confidence_interval, p_val
+    return p_val < alpha, p_val
 
 
 def _get_runs_list(list1, list2):
