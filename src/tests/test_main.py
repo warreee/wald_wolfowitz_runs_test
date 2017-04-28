@@ -23,10 +23,10 @@ class TestMain(object):
         p_val = runs(list_dist_A, list_dist_B)
         assert_greater(p_val, 0.05)
 
-        list_dist_A = np.random.chisquare(1, 2000)
-        list_dist_B = list_dist_A
-        p_val = runs(list_dist_A[:1000], list_dist_B[-1000:])
-        p_val2 = runs(list_dist_B[-1000:], list_dist_A[:1000])
+        list_dist_A = np.random.chisquare(1, 1000000)
+        list_dist_B = np.random.chisquare(1, 1000000)
+        p_val = runs(list_dist_A, list_dist_B)
+        p_val2 = runs(list_dist_B, list_dist_A)
         assert_equal(p_val, p_val2)
         assert_less_equal(p_val, 0.05)
 

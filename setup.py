@@ -1,0 +1,27 @@
+"""
+https://github.com/pypa/sampleproject
+http://python-packaging.readthedocs.io/en/latest/minimal.html
+"""
+from setuptools import setup, find_packages
+from os import path
+
+setup(
+    name='wald-wolfowitz-runs-test',
+    version='0.1',
+    description='Implementation of the Wald-Wolfowitz Runs test',
+    long_description="The Wald-Wolfowitz runs test can be used to determine whether to sets are from the same set or not.",
+    url='https://github.com/warreee/wald-wolfowitz-runs-test',
+    author='Ward Schodts',
+    author_email='schodtsward@gmail.com',
+    license='GNU3',
+    classifiers=[
+        'Development Status :: 3 - Alpha',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: GNU3',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 2.7',
+    ],
+    packages=find_packages(),
+    install_requires=['numpy', 'scipy']
+
+)
