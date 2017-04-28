@@ -7,7 +7,7 @@ from os import path
 
 setup(
     name='wald_wolfowitz_runs_test',
-    version='0.1.4',
+    version='0.1.5',
     description='Implementation of the Wald-Wolfowitz runs test',
     long_description="The Wald-Wolfowitz runs test can be used to determine whether to sets are from the same set or not.",
     url='https://github.com/warreee/wald_wolfowitz_runs_test',
