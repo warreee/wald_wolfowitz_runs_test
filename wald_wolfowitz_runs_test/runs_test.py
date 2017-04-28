@@ -35,8 +35,8 @@ def _get_runs_list(list1, list2):
     :param list2: 
     :return: 
     """
-    l1 = _add_label_to_list(list1, "X")
-    l2 = _add_label_to_list(list2, "Y")
+    l1 = list(_add_label_to_list(list1, "X"))
+    l2 = list(_add_label_to_list(list2, "Y"))
     lst = l1 + l2
     sorted_list = sorted(lst, key=lambda x: x[0])
     return [l[1] for l in sorted_list]
