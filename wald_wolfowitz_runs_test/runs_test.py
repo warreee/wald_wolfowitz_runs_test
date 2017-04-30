@@ -8,7 +8,7 @@ def _calculate_p_value(z_value):
     Here we assume using the normal distribution
     :return: 
     """
-    return norm.sf(abs(z_value))
+    return norm.sf(-z_value)
 
 
 def runs(list1, list2, alpha=0.05):
